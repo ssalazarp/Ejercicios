@@ -1,0 +1,110 @@
+<html>
+<head>
+<meta charset="UTF-8"> 
+<title>Formularios</title>
+<!--Script para cambiar aspectos de la tabla y algunas etiquetas-->
+<style>
+    table{
+        border: thin solid black;
+        font: inherit;
+    }
+    th,td{
+        border: thin solid black;
+        padding: 10px;
+        text-align: left;
+    }
+    select{
+        color:red;
+        background-color: yellow;
+    }
+    caption{
+        font-size: 30;
+    }
+</style>
+</head>
+<body>
+<!--Etiqueta que ejecuta el script de php-->
+<form method="post" action="form.php">
+    <table>
+        <caption>Empleado Nuevo</caption>
+        <tr>
+            <th>Cédula: </th>
+            <th><input type="text" name="txt1" value=""></th>
+        </tr>
+        <tr>
+            <th>Nombre: </th>
+            <th><input type="text" name="txt2" value=""></th>
+        </tr>
+        <tr>
+            <th>Apellidos: </th>
+            <th><input type="text" name="txt3" value=""></th>
+        </tr>
+        <tr>
+            <th><br>Sexo: </th>
+            <th><input type="radio" name="radio" value="Masculino">
+                Masculino<input type="radio" name="radio" value="Femenino">Femenino</th>
+        </tr>
+        <tr>
+            <th>Dirección: </th>
+            <th><input type="text" name="txt4" value=""></th>
+        </tr>
+        <tr>
+            <th>Estado civil: </th>
+            <th>
+              <select name="select">
+                <option>Soltero/a</option>
+                <option>Casado/a</option>
+                <option selected>Viudo/a</option>
+              </select>
+            </th>
+        </tr>
+        <tr>
+            <th>Fecha de nacimiento: </th>
+            <th>
+                <input type="date" id="start" name="calendar"
+                       value=""
+                       min="1980-01-01" max="2030-12-31">
+            </th>
+        </tr>
+        <tr>
+            <th>Teléfono: </th>
+            <th><input type="text" name="txt5" value=""></th>
+        </tr>
+        <tr>
+            <th>Celular: </th>
+            <th><input type="text" name="txt6" value=""></th>
+        </tr>
+        <tr>
+            <th>Email: </th>
+            <th><input type="text" name="txt7" value="Entre una dirección de correo valido"></th>
+        </tr>
+        <tr>
+            <th>Seguridad social: </th>
+            <th><input type="text" name="txt8" value=""></th>
+        </tr>
+        <tr>
+            <th>Número de hijos: </th>
+            <th><input type="text" name="txt9" value=""></th>
+        </tr>
+        <tr>
+            <th>Ciudad: </th>
+            <th>
+              <select name="select2">
+                <option selected>Medellín</option>
+                <option>Bogotá</option>
+                <option>Barranquilla</option>
+              </select>
+            </th>
+        </tr>
+        <tr>
+            <th>Departamento: </th>
+            <th><input type="text" name="txt10" value=""></th>
+        </tr>
+    </table>
+    <br>
+    <!--Botones para ejecutar el php o resetear los campos-->
+    <input type="submit" name="btn1" value="Enviar"></th>
+    <input type="reset" name="btn2" value="Cancelar"></th>
+</form>
+</body>
+</html>
